@@ -19,13 +19,17 @@
       font-family: sans-serif;
     }
 
+    .container {
+      padding: 12px; /* espacio para que la sombra no se corte */
+    }
+
     .widget {
-      width: 200px;
-      height: 200px;
+      width: 160px;
+      height: 160px;
       background: #fff;
       border: 2px solid black;
       border-radius: 16px;
-      box-shadow: 6px 6px 0px 0px black; /* sombra abajo y derecha */
+      box-shadow: 5px 5px 0px 0px black; /* sombra abajo/derecha */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -35,24 +39,26 @@
     }
 
     .title {
-      font-size: 14px;
+      font-size: 13px;
       color: #777;
       font-weight: bold;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .content {
       font-weight: bold;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.2;
       white-space: pre-line;
     }
   </style>
 </head>
 <body>
-  <div class="widget">
-    <div class="title">Sesión de estudio de hoy</div>
-    <div class="content" id="tarea">Cargando...</div>
+  <div class="container">
+    <div class="widget">
+      <div class="title">Sesión de estudio de hoy</div>
+      <div class="content" id="tarea">Cargando...</div>
+    </div>
   </div>
 
   <script>
