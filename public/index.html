@@ -9,22 +9,24 @@
       background: #FFFFFF;
       border-radius: 12px;
       height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
+
     .titulo {
       color: #888888;
       font-weight: normal;
       font-size: 1em;
-      margin-bottom: 0.3em;
+      margin-bottom: 0.5em;
     }
+
     .tarea {
       font-size: 1.5em;
       font-weight: bold;
-      white-space: pre-line; /* Para mostrar los saltos de línea (\n) */
+      white-space: pre-line; /* para permitir saltos de línea */
     }
   </style>
 </head>
@@ -36,8 +38,19 @@
 
   <script>
     const tareas = {
-      "Monday": "Lunes\nRevisión de la clase de Ecología y Fisiología Vegetal",
-      "Tuesday": "Martes\nRepaso de la clase de Ecología y Fisiología Vegetal",
-      "Wednesday": "Miércoles\nRevisión de la clase de Genética y Fisiología Animal",
-      "Thursday": "Jueves\nRepaso de la clase de Genética y Fisiología Animal",
-      "Friday": "
+      Monday: "Lunes\nRevisión de la clase de Ecología y Fisiología Vegetal",
+      Tuesday: "Martes\nRepaso de la clase de Ecología y Fisiología Vegetal",
+      Wednesday: "Miércoles\nRevisión de la clase de Genética y Fisiología Animal",
+      Thursday: "Jueves\nRepaso de la clase de Genética y Fisiología Animal",
+      Friday: "Viernes\nRepaso libre",
+      Saturday: "Sábado\nRepaso libre",
+      Sunday: "Domingo\nLibre o catch-up"
+    };
+
+    const dia = new Date().toLocaleDateString("en-US", { weekday: 'long' });
+    const tareaHoy = tareas[dia] || "Sin tarea asignada";
+    document.getElementById("tarea").innerText = tareaHoy;
+  </script>
+</body>
+</html>
+
