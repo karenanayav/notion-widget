@@ -7,6 +7,7 @@
     * {
       box-sizing: border-box;
     }
+
     html, body {
       height: 100%;
       margin: 0;
@@ -19,39 +20,39 @@
     }
 
     .widget {
-      width: 240px;
-      height: 240px;
+      width: 200px;
+      height: 200px;
       background: #fff;
       border: 2px solid black;
       border-radius: 16px;
-      box-shadow: 6px 6px 0px 0px black; /* sombra solo en abajo y derecha */
-      text-align: center;
-      padding: 20px;
+      box-shadow: 6px 6px 0px 0px black; /* sombra abajo y derecha */
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      padding: 1em;
+      text-align: center;
     }
 
     .title {
-      color: #666;
       font-size: 14px;
-      font-weight: normal;
+      color: #777;
+      font-weight: bold;
       margin-bottom: 8px;
     }
 
     .content {
       font-weight: bold;
       font-size: 16px;
+      line-height: 1.2;
       white-space: pre-line;
-      margin: 0;
-      line-height: 1.4;
     }
   </style>
 </head>
 <body>
   <div class="widget">
-    <p class="title">Sesión de estudio de hoy</p>
-    <p class="content" id="tarea">Cargando...</p>
+    <div class="title">Sesión de estudio de hoy</div>
+    <div class="content" id="tarea">Cargando...</div>
   </div>
 
   <script>
