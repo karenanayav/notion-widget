@@ -9,56 +9,52 @@
     }
 
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
-      background: transparent;
+      width: 100vw;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: sans-serif;
-    }
-
-    .container {
-      padding: 12px; /* espacio para que la sombra no se corte */
+      background: transparent;
+      font-family: 'Arial', sans-serif;
     }
 
     .widget {
-      width: 160px;
-      height: 160px;
-      background: #fff;
+      width: 90%;
+      max-width: 220px;
+      aspect-ratio: 1 / 1;
+      background-color: white;
       border: 2px solid black;
       border-radius: 16px;
-      box-shadow: 5px 5px 0px 0px black; /* sombra abajo/derecha */
+      box-shadow: 6px 6px 0px 0px black;
+      padding: 1em;
+      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 1em;
-      text-align: center;
     }
 
     .title {
-      font-size: 13px;
       color: #777;
       font-weight: bold;
+      font-size: 14px;
       margin-bottom: 6px;
     }
 
     .content {
       font-weight: bold;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.2;
       white-space: pre-line;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="widget">
-      <div class="title">Sesión de estudio de hoy</div>
-      <div class="content" id="tarea">Cargando...</div>
-    </div>
+  <div class="widget">
+    <div class="title">Sesión de estudio de hoy</div>
+    <div class="content" id="tarea">Cargando...</div>
   </div>
 
   <script>
@@ -77,3 +73,4 @@
   </script>
 </body>
 </html>
+
