@@ -20,16 +20,16 @@
   <h2 id="tarea">Cargando...</h2>
   <script>
     const tareas = {
-      "Monday": "Revisión de la clase de Ecología y Fisiología Vegetal",
-      "Tuesday": "Repaso de la clase de Ecología y Fisiología Vegetal ",
-      "Wednesday": "Revisión de la clase de Genética y Fisiología Animal",
-      "Thursday": "Repaso de la clase de Genética y Fisiología Animal",
-      "Friday": "Repaso libre",
-      "Saturday": "Repaso libre",
-      "Sunday": "Libre o catch-up"
+     "Monday": "Lunes\nRevisión de la clase de Ecología y Fisiología Vegetal",
+      "Tuesday": "Martes\nRepaso de la clase de Ecología y Fisiología Vegetal",
+      "Wednesday": "Miércoles\nRevisión de la clase de Genética y Fisiología Animal",
+      "Thursday": "Jueves\nRepaso de la clase de Genética y Fisiología Animal",
+      "Friday": "Viernes\nRepaso libre",
+      "Saturday": "Sábado\nRepaso libre",
+      "Sunday": "Domingo\nLibre o catch-up"
     };
     const dia = new Date().toLocaleDateString("en-US", { weekday: 'long' });
-    document.getElementById("tarea").innerText = "🧠 Hoy toca (8:00 -10:00 PM): " + tareas[dia];
+    document.getElementById("tarea").innerText = "Sesión de estudio de hoy " + tareas[dia];
   </script>
 </body>
 </html>
