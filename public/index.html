@@ -6,21 +6,44 @@
   <style>
     body {
       font-family: sans-serif;
-      text-align: center;
-      padding: 2em;
       background: #FFFFFF;
-      border-radius: 12px;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    h2 {
-      font-size: 1.5em;
+
+    #container {
+      text-align: center;
+      white-space: pre-line;
+    }
+
+    .intro {
+      color: #888888;
+      font-weight: normal;
+      margin-bottom: 0.5em;
+    }
+
+    .dia {
+      color: #888888;
+      font-weight: normal;
+    }
+
+    .detalle {
+      font-size: 1.2em;
     }
   </style>
 </head>
 <body>
-  <h2 id="tarea">Cargando...</h2>
+  <div id="container">
+    <div class="intro">Sesión de estudio de hoy</div>
+    <div class="detalle" id="tarea">Cargando...</div>
+  </div>
+
   <script>
     const tareas = {
-     "Monday": "Lunes\nRevisión de la clase de Ecología y Fisiología Vegetal",
+      "Monday": "Lunes\nRevisión de la clase de Ecología y Fisiología Vegetal",
       "Tuesday": "Martes\nRepaso de la clase de Ecología y Fisiología Vegetal",
       "Wednesday": "Miércoles\nRevisión de la clase de Genética y Fisiología Animal",
       "Thursday": "Jueves\nRepaso de la clase de Genética y Fisiología Animal",
@@ -28,8 +51,12 @@
       "Saturday": "Sábado\nRepaso libre",
       "Sunday": "Domingo\nLibre o catch-up"
     };
+
     const dia = new Date().toLocaleDateString("en-US", { weekday: 'long' });
-    document.getElementById("tarea").innerText = "Sesión de estudio de hoy " + tareas[dia];
+    const texto = tareas[dia].split('\n');
+    const diaTexto = `<span class="dia">${texto[0]}</span>`;
+    const detalleTexto = texto[1];
+    document.getElementById("tarea").innerHTML = `${diaTexto}\n${detalleTexto}`;
   </script>
 </body>
 </html>
