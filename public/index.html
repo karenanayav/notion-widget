@@ -7,38 +7,31 @@
     body {
       font-family: sans-serif;
       background: #FFFFFF;
+      border-radius: 12px;
       height: 100vh;
-      margin: 0;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0;
     }
-
-    #container {
-      text-align: center;
-      white-space: pre-line;
-    }
-
-    .intro {
+    .titulo {
       color: #888888;
       font-weight: normal;
-      margin-bottom: 0.5em;
+      font-size: 1em;
+      margin-bottom: 0.3em;
     }
-
-    .dia {
-      color: #888888;
-      font-weight: normal;
-    }
-
-    .detalle {
-      font-size: 1.2em;
+    .tarea {
+      font-size: 1.5em;
+      font-weight: bold;
+      white-space: pre-line; /* Para mostrar los saltos de línea (\n) */
     }
   </style>
 </head>
 <body>
-  <div id="container">
-    <div class="intro">Sesión de estudio de hoy</div>
-    <div class="detalle" id="tarea">Cargando...</div>
+  <div>
+    <div class="titulo">Sesión de estudio de hoy</div>
+    <div class="tarea" id="tarea">Cargando...</div>
   </div>
 
   <script>
@@ -47,16 +40,4 @@
       "Tuesday": "Martes\nRepaso de la clase de Ecología y Fisiología Vegetal",
       "Wednesday": "Miércoles\nRevisión de la clase de Genética y Fisiología Animal",
       "Thursday": "Jueves\nRepaso de la clase de Genética y Fisiología Animal",
-      "Friday": "Viernes\nRepaso libre",
-      "Saturday": "Sábado\nRepaso libre",
-      "Sunday": "Domingo\nLibre o catch-up"
-    };
-
-    const dia = new Date().toLocaleDateString("en-US", { weekday: 'long' });
-    const texto = tareas[dia].split('\n');
-    const diaTexto = `<span class="dia">${texto[0]}</span>`;
-    const detalleTexto = texto[1];
-    document.getElementById("tarea").innerHTML = `${diaTexto}\n${detalleTexto}`;
-  </script>
-</body>
-</html>
+      "Friday": "
