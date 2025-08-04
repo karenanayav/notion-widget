@@ -16,22 +16,22 @@
       text-align: center;
     }
 
+    .container {
+      font-weight: bold;
+      line-height: 1.2; /* menos espacio entre líneas */
+    }
+
     .titulo {
       color: #888888;
-      font-weight: normal;
-      font-size: 1em;
-      margin-bottom: 0.5em;
     }
 
     .tarea {
-      font-size: 1.5em;
-      font-weight: bold;
-      white-space: pre-line; /* para permitir saltos de línea */
+      white-space: pre-line; /* permite saltos de línea */
     }
   </style>
 </head>
 <body>
-  <div>
+  <div class="container">
     <div class="titulo">Sesión de estudio de hoy</div>
     <div class="tarea" id="tarea">Cargando...</div>
   </div>
@@ -53,4 +53,5 @@
   </script>
 </body>
 </html>
+
 
